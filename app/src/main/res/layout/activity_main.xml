@@ -3,7 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcolo della Puntata"
+        android:textSize="24sp"
+        android:textColor="@color/primary_text_color"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"/>
 
     <EditText
         android:id="@+id/capitalInput"
@@ -11,7 +22,10 @@
         android:layout_height="wrap_content"
         android:hint="Capitale iniziale"
         android:inputType="numberDecimal"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
 
     <EditText
         android:id="@+id/eventsInput"
@@ -19,14 +33,23 @@
         android:layout_height="wrap_content"
         android:hint="Numero di eventi"
         android:inputType="number"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Calcola Puntata" />
+        android:text="Calcola Puntata"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary_color"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp"/>
 
     <TextView
         android:id="@+id/resultText"
@@ -35,5 +58,8 @@
         android:text="Risultato"
         android:visibility="gone"
         android:textSize="18sp"
-        android:layout_gravity="center_horizontal"/>
+        android:textColor="@color/secondary_text_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"/>
 </LinearLayout>
+
