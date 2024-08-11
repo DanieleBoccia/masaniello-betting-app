@@ -7,8 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_color">#F5F5F5</color>
-    <color name="primary_color">#6200EE</color>
-    <color name="primary_text_color">#212121</color>
-    <color name="secondary_text_color">#757575</color>
+
+
+    <color name="background_color">#FFFFFF</color>
+    <color name="primary_text_color">#1D1D1F</color>
+    <color name="secondary_text_color">#86868B</color>
+    <color name="button_background_color">#4FD1C5</color>
+    <color name="input_background_color">#F5F5F7</color>
+    <color name="toolbar_color">#FFFFFF</color>
+    <color name="hint_text_color">#BDBDBD</color>
+    <color name="button_pressed_color">#0056B3</color>
 </resources>

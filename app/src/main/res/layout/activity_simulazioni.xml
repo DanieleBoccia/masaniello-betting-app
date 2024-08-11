@@ -1,0 +1,114 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Toolbar con il logo e l'icona di ricerca -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/toolbar_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logoImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="-322dp"
+                    android:contentDescription="Logo Masaniello"
+                    android:src="@drawable/masaniello_logo" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Cerca"/>
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Campo di input per il capitale iniziale -->
+        <EditText
+            android:id="@+id/capitalInputSimulazione"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Capitale iniziale"
+            android:inputType="numberDecimal"
+            android:textSize="17sp"
+            android:padding="16dp"
+            android:background="@drawable/minimal_input_background"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Campo di input per il numero di eventi -->
+        <EditText
+            android:id="@+id/eventsInputSimulazione"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Numero di eventi"
+            android:inputType="number"
+            android:textSize="17sp"
+            android:padding="16dp"
+            android:background="@drawable/minimal_input_background"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/capitalInputSimulazione"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Bottone per avviare la simulazione -->
+        <Button
+            android:id="@+id/btn_start_simulation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Avvia Simulazione"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4FD1C5"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/eventsInputSimulazione"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="16dp"/>
+
+        <!-- Sezione per visualizzare i risultati -->
+        <TextView
+            android:id="@+id/resultTextSimulazione"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Risultati"
+            android:visibility="gone"
+            android:textSize="17sp"
+            android:textColor="@color/secondary_text_color"
+            android:gravity="start"
+            app:layout_constraintTop_toBottomOf="@id/btn_start_simulation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

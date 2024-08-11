@@ -65,6 +65,8 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.kotlin.stdlib)
+    implementation(libs.firebase.auth.ktx)
+    implementation(libs.firebase.firestore.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
